@@ -5,7 +5,7 @@ library(ggplot2)
 
 access_token <- Sys.getenv("MASTODON_TOKEN")
 type <- "user"
-instance <- "mstdn.party"
+instance <- "loðfíll.is"
 
 token <- structure(
     list(
