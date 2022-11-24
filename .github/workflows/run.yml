@@ -3,7 +3,7 @@ name: run_and_post_to_mastodon
 on:
   workflow_dispatch:
   schedule:
-    - cron: '56 7 * * *'
+    - cron: '02 8 * * *'
 
 env:
   MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
