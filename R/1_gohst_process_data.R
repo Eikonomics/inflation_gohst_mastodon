@@ -39,6 +39,6 @@ random_product_name <-
 product_data <-
   gohst_data %>%
   filter(Undirvísitala == "Vísitala neysluverðs" | product_id == random_product) %>%
-  filter(ym > floor_date(ym(substr(Sys.Date(), 1, 7)) - 365 * 2)) %>%
+  filter(ym > floor_date(ym(substr(Sys.Date(), 1, 7)) - (365+20))) %>%
   group_by(Undirvísitala) %>%
   mutate(new_index = 100 * `Vísitala neysluverðs` / `Vísitala neysluverðs`[1])

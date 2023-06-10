@@ -12,6 +12,7 @@ plot_price_index <-
   ) +
   ylab("Vísitala") +
   xlab("Ár") +
+  scale_x_date(date_breaks = "month", date_labels = "%b-%Y") +
   ggtitle(random_product_name,
     subtitle = paste0(
       "Verðþróun, ",
@@ -32,7 +33,8 @@ plot_price_index <-
     legend.text = element_text(size = 18),
     axis.title = element_text(size = 26),
     axis.text = element_text(size = 20),
-    axis.text.x = element_text(hjust = 0.5)
+    axis.text.x = element_text(angle = 90, vjust = 0.5), 
+    plot.background = element_rect(fill = "white")
   )
 
 filename <- tempfile(pattern = "file", fileext = ".png")
